@@ -1,7 +1,19 @@
 "use strict";
 //!============================================= initiate Default data =================================================!//
 window.onload = function () {
-  getTemperature();
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  } else {
+    this.alert("Geolocation is not supported by this browser.");
+  }
+
+  function success(position) {
+    getTemperature(`${position.coords.latitude},${position.coords.longitude}`);
+  }
+
+  function error() {
+    getTemperature();
+  }
 };
 
 //!============================================= Start Get location from user =================================================!//
