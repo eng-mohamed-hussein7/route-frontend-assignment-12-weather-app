@@ -1,0 +1,23 @@
+@media screen and (min-width: 992px) {
+  .weather-cards {
+    transform: translateY(-32%);
+  }
+  #after-tomorrow-card .card-body,
+  #tomorrow-card .card-body {
+    padding: 89px 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #after-tomorrow-card .card-body,
+  #tomorrow-card .card-body {
+    padding: 89px 20px 105px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #after-tomorrow-card .card-body,
+  #tomorrow-card .card-body {
+    padding: 89px 20px 120px;
+  }
+}

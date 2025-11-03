@@ -1,0 +1,200 @@
+/********************************* Start Font Family*********************************/
+@font-face {
+  font-family: Roboto-700;
+  src: url(./Roboto-font/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: Roboto-300;
+  src: url(./Roboto-font/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: Roboto-400;
+  src: url(./Roboto-font/Roboto-Regular.ttf);
+}
+/********************************* End Font Family*********************************/
+/********************************* Start Global *********************************/
+:root {
+  --icon-Color: #009ad8;
+  --body-bg-color: #1e202b;
+  --footer-bg-color: #262936;
+  --primary-bg-color: #323544;
+  --first-card-header-bg-color: #2d303d;
+  --second-card-header-bg-color: #222530;
+  --white-text-color: #fff;
+  --semi-white-color: #bfc1c8;
+}
+body {
+  font-family: Roboto-400, "Open Sans", sans-serif;
+  background-color: var(--body-bg-color);
+  color: var(--white-text-color);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/********************************* End Global *********************************/
+/********************************* Start Navbar *********************************/
+nav.navbar {
+  background-color: var(--body-bg-color) !important;
+}
+nav.navbar .container .collapse .navbar-nav .nav-item .nav-link.active,
+nav.navbar .container .collapse .navbar-nav .nav-item .nav-link:hover {
+  color: var(--icon-Color);
+  padding: 5px 25px;
+  border: 2px solid var(--icon-Color);
+  border-radius: 30px;
+}
+nav.navbar .container .collapse .navbar-nav .nav-item .nav-link {
+  padding: 5px 25px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  font-size: 0.875rem;
+  color: var(--white-text-color);
+  transition: 0.3s ease;
+}
+h1 {
+  font-family: Roboto-700, "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+a p {
+  font-family: Roboto-300, "Open Sans", sans-serif;
+  font-size: 0.625rem;
+  color: var(--semi-white-color);
+}
+/*********************************     End Navbar    *********************************/
+/********************************* Start Search and Subscribe Form *********************************/
+.hero {
+  background-image: url(../images/banner.png);
+  background-size: cover;
+  min-height: 320px;
+}
+.subscribe-form,
+.search-form {
+  position: relative;
+}
+.subscribe-form input::placeholder,
+.search-form input::placeholder {
+  color: #757575;
+}
+.subscribe-form input:focus,
+.subscribe-form input,
+.search-form input:focus,
+.search-form input {
+  padding: 1.25rem 3.125rem 1.25rem 1.25rem;
+  background-color: var(--body-bg-color);
+  color: var(--white-text-color);
+  font-size: 0.875rem;
+  border: none;
+  box-shadow: none;
+}
+
+.subscribe-form button,
+.search-form button {
+  font-size: 0.875rem;
+  position: absolute;
+  top: 50%;
+  right: 0.25rem;
+  transform: translateY(-50%);
+  padding-inline: 2.5rem;
+  padding-block: 15px;
+  font-size: 0.875rem;
+  background-color: var(--icon-Color);
+  color: var(--white-text-color);
+  border: none;
+}
+.subscribe-form button {
+  padding-inline: 1rem;
+}
+/*********************************  End Search and Subscribe Form  *********************************/
+/*********************************   Start Temperature Section     *********************************/
+.weather-cards {
+  transform: translateY(-12%);
+}
+#after-tomorrow-card .card-header,
+#today-card .card-header {
+  background-color: var(--first-card-header-bg-color);
+  color: var(--semi-white-color);
+  font-size: 0.875rem;
+}
+#today-card .card-body {
+  background-color: var(--primary-bg-color);
+  color: var(--semi-white-color);
+  padding: 1.875rem 1.25rem;
+}
+#today-card .card-body .card-title {
+  font-size: 1.125rem;
+}
+#today-card .card-body .temperature {
+  font-size: 5.625rem;
+  color: var(--white-text-color);
+}
+.card .card-body p {
+  color: var(--icon-Color);
+  font-family: Roboto-300;
+  font-size: 0.875rem;
+}
+
+#tomorrow-card .card-header {
+  background-color: var(--second-card-header-bg-color);
+  color: var(--semi-white-color);
+  font-size: 0.875rem;
+}
+#after-tomorrow-card .card-body,
+#tomorrow-card .card-body {
+  background-color: var(--footer-bg-color);
+  color: var(--semi-white-color);
+  padding: 50px 20px;
+}
+#after-tomorrow-card .card-body .the-high,
+#tomorrow-card .card-body .the-high {
+  color: var(--white-text-color);
+  font-size: 1.5rem;
+  font-family: Roboto-700;
+}
+#tomorrow-card .card-body .the-low,
+#after-tomorrow-card .card-body .the-low {
+  font-family: Roboto-300;
+}
+#after-tomorrow-card .card-body {
+  background-color: var(--primary-bg-color);
+}
+
+/*********************************   End Temperature Section     *********************************/
+/*********************************   Start Footer Section     *********************************/
+footer {
+  margin-top: -85px;
+  background-color: var(--footer-bg-color);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+.social-links a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1e202b;
+  color: #009ad8;
+  text-align: center;
+  line-height: 2;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  font-size: 18px;
+}
+.social-links a:hover {
+  background-color: var(--icon-Color);
+  color: var(--white-text-color);
+}
+.copyright p {
+  font-size: 0.875rem;
+  color: var(--semi-white-color);
+}
+
+/*********************************    End Footer Section     *********************************/
